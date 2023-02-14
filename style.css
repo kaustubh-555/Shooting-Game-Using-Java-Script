@@ -1,0 +1,44 @@
+*{
+    border: none;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+}
+.main{
+    background-color:#181823;
+    height: 100vh; 
+    width:1300px;
+}
+/* .main:hover{
+    cursor: url("./images/aim.png"),auto;
+} */
+.scoreboard{
+    background-color: #301E67;
+    width:300px;
+    padding: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+#s{
+    font-size: 2rem;
+    color: #B6EADA;
+}
+#score{
+    padding-block: 50px; ;
+    font-size: 2rem;
+    color: #5B8FB9;
+    
+}
+.btn{
+    padding: 10px;
+    color: #B6EADA;
+    font-size: 1.5rem;
+    width: 80%;
+    margin-bottom: 50px;
+    background-color: #5B8FB9;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-weight: bolder; */
+}
