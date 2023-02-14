@@ -1,5 +1,6 @@
 let i;
 let difficulty=2000;
+let lowerLimit=1000;
 function reposition(){
     x=Math.random()*1000;
     y=Math.random()*500;
@@ -33,14 +34,14 @@ function begin(e){
     }
     e.preventDefault();
 }
-let lowerLimit=1000;
-function increasescore(e){
+function increasescore(){
     let score=document.getElementById('score').innerHTML;
     let s=Number(score);
     s+=100;
     if(s>lowerLimit&&s<10000){
         lowerLimit+=1000;
         difficulty-=120;
+        displayMessage();
     }
     document.getElementById('score').innerHTML=s;
     clearInterval(i);
@@ -50,4 +51,16 @@ function increasescore(e){
 function terminate(){
     clearInterval(i);
     alredyPlaying=true;
+    lowerLimit=1000;
+    difficulty=2000;
 }    
+function displayMessage(){
+    let msg=document.createElement("div");
+    msg.id="m";
+    msg.innerHTML="LEVEL UP !";
+    let temp=document.querySelector(".main");
+    temp.appendChild(msg);
+    setTimeout(()=>{
+        temp.removeChild(msg);
+    },1000);
+}
