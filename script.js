@@ -26,11 +26,11 @@ document.querySelector('#stop').addEventListener('click',terminate);
 function begin(e){
     if(alredyPlaying===false){
         document.querySelector(".main").appendChild(target);
-        i=setInterval(reposition,2000);
+        i=setInterval(reposition,difficulty);
     }
     else{
         document.getElementById("score").innerHTML="0";
-        i=setInterval(reposition,2000);
+        i=setInterval(reposition,difficulty);
     }
     e.preventDefault();
 }
@@ -45,7 +45,7 @@ function increasescore(){
     }
     document.getElementById('score').innerHTML=s;
     clearInterval(i);
-    i=setInterval(reposition,2000);
+    i=setInterval(reposition,difficulty);
     reposition();
 }
 function terminate(){
